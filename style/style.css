@@ -58,3 +58,23 @@ color: black !important;
     right:1px;
     background: #f55265 !important;
 }
+.img-background1{
+    background-size: cover !important;
+    background-position: center !important;
+    background-image: url(/images/01.jpg ) !important;
+    padding: 21% 10%;
+    
+}
+.img-background2{
+    background-size: cover !important;
+    background-position: center !important;
+    background-image: url(/images/02.jpg ) !important;
+    padding: 21% 10%;
+    
+}
+.img-background3{
+    background-size: cover !important;
+    background-position: center !important;
+    background-image: url(/images/03.jpg ) !important;
+    padding: 21% 10%;
+}
