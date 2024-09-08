@@ -62,19 +62,51 @@ color: black !important;
     background-size: cover !important;
     background-position: center !important;
     background-image: url(/images/01.jpg ) !important;
-    padding: 21% 10%;
+    padding: 16% 5%;
+    height: 100vh;
     
 }
 .img-background2{
     background-size: cover !important;
     background-position: center !important;
     background-image: url(/images/02.jpg ) !important;
-    padding: 21% 10%;
+    padding: 16% 5%;
+    height: 100vh;
     
 }
 .img-background3{
     background-size: cover !important;
     background-position: center !important;
     background-image: url(/images/03.jpg ) !important;
-    padding: 21% 10%;
+    padding: 16% 5%;
+    height: 100vh;
+}
+.icon-bg{
+    padding: 6px 6px;
+}
+.icon-bg1{
+  padding: 6px 11px;
+}
+.font{
+    font-size: 4rem;
+    font-weight: 700;
+}
+.shop-btn{
+    transition: all 0.3s;
+}
+.shop-btn:hover{
+   color: black !important;
+   background-color: white !important;
+}
+.bg-1{
+   background:#feeeef; 
+}
+.bg-2{
+    background:#ecf7f1; 
+}
+.bg-3{
+    background:#eaf1fb; 
+}
+.margin-top{
+    margin-top: 20vh;
 }
