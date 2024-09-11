@@ -108,5 +108,61 @@ color: black !important;
     background:#eaf1fb; 
 }
 .margin-top{
-    margin-top: 20vh;
+    margin-top: 25vh;
+}
+.img-size{
+    width: 80px;
+}
+.lifestyle-cards{
+    padding: 70px 0px;
+    margin-bottom: 15%;
+}
+.bg-4{
+  background-color: #feecec;
+}
+.input-placeholder::placeholder{
+    color: white !important;
+}
+.text-second{
+    color: #d9d8d6  !important;
+}
+.nav-link:hover{
+cursor: pointer;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ec4848;
+    transition: width .3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+/* sign-IN */
+
+.bg-gradient{
+    background: linear-gradient(90deg, rgba(230,239,253,1) 50%, rgba(173,203,239,1) 100%)  !important;
+}
+.form-control{
+    padding: 13px 20px !important;
+}
+.form-control::placeholder{
+ font-weight: 500;
+ color: #b7b8ba ;
+}
+
+
+.btn-signin:hover{
+ border: 1px solid #222121 !important;
+}
+.bg-trans{
+    background-color: rgba(255, 255, 255, 0.201);
+    border: 1px solid white;
+    border-radius: 10px;
 }

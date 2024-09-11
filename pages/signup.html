@@ -4,11 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartzilla | Sign up</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+/>
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
     <link rel="stylesheet" href="/style/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
 </head>
 <body>
+    <main class="container-fluid my-4">
+        <div class="mx-4">
+          <div class="row gx-5">
+            <div class="col-12 col-lg-4">
+              <div class="d-flex h-100 flex-column justify-content-between">
+                <!-- header -->
+                <a href="" class="text-decoration-none text-danger">
+                  <div class="d-flex align-items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="36"
+                      height="36"
+                    >
+                      <path
+                        d="M36 18.01c0 8.097-5.355 14.949-12.705 17.2a18.12 18.12 0 0 1-5.315.79C9.622 36 2.608 30.313.573 22.611.257 21.407.059 20.162 0 18.879v-1.758c.02-.395.059-.79.099-1.185.099-.908.277-1.817.514-2.686C2.687 5.628 9.682 0 18 0c5.572 0 10.551 2.528 13.871 6.517 1.502 1.797 2.648 3.91 3.359 6.201.494 1.659.771 3.436.771 5.292z"
+                        fill="currentColor"
+                      ></path>
+                      <g fill="#fff">
+                        <path
+                          d="M17.466 21.624c-.514 0-.988-.316-1.146-.829-.198-.632.138-1.303.771-1.501l7.666-2.469-1.205-8.254-13.317 4.621a1.19 1.19 0 0 1-1.521-.75 1.19 1.19 0 0 1 .751-1.521l13.89-4.818c.553-.197 1.166-.138 1.64.158a1.82 1.82 0 0 1 .85 1.284l1.344 9.183c.138.987-.494 1.994-1.482 2.33l-7.864 2.528-.375.04zm7.31.138c-.178-.632-.85-1.007-1.482-.81l-5.177 1.58c-2.331.79-3.28.02-3.418-.099l-6.56-8.412a4.25 4.25 0 0 0-4.406-1.758l-3.122.987c-.237.889-.415 1.777-.514 2.686l4.228-1.363a1.84 1.84 0 0 1 1.857.81l6.659 8.551c.751.948 2.015 1.323 3.359 1.323.909 0 1.857-.178 2.687-.474l5.078-1.54c.632-.178 1.008-.829.81-1.481z"
+                        ></path>
+                        <use href="#czlogo"></use>
+                        <use href="#czlogo" x="8.516" y="-2.172"></use>
+                      </g>
+                      <defs>
+                        <path
+                          id="czlogo"
+                          d="M18.689 28.654a1.94 1.94 0 0 1-1.936 1.935 1.94 1.94 0 0 1-1.936-1.935 1.94 1.94 0 0 1 1.936-1.935 1.94 1.94 0 0 1 1.936 1.935z"
+                        ></path>
+                      </defs>
+                    </svg>
+                    <span class="ms-2 text-black fs-3 fw-semibold"
+                      >Cartzilla</span
+                    >
+                  </div>
+                </a>
+                <!-- main -->
+                <div>
+                  <h2 class="fw-semibold mb-3 mt-3">Create an account</h2>
+                  <span class="fs-7">
+                    I already have an account
+                    <a href="/pages/signin.html" class="text-black ms-2"> Sign in</a>
+                  </span>
+                  <form id="signUpForm" class="mt-4">
+                      <div class="mb-4">
+                        <label for="" class="mb-2">Email</label>
+                          <input class="form-control" type="email" placeholder="" name="" id="email" />
+                      </div>
+                      <div>
+                        <label for="" class="mb-2">Password</label>
+                          <input class="form-control" type="password" placeholder="Minimum 8 characters" name="" id="password" />
+                      </div>
+                    <div class=" my-4">
+                      <label for="savePass" class="d-flex align-items-center fs-7">
+                        <input type="checkbox" name="" class="form-check me-2" id="savePass" />Save the password
+                      </label>
+                      <label for="read" class="d-flex align-items-center fs-7">
+                        <input type="checkbox" name="" class="form-check me-2" id="read" /><span class="me-2">I have read and accept the</span> 
+                        <a href="" class="text-dark "> Privacy Policy</a>
+                      </label>
+                    </div>
+                    <button class="btn btn-danger w-100 py-3" type="submit">Create an account <i class="bi bi-chevron-right fs-7"></i></button>
+                    <div class="d-flex align-items-center justify-content-center my-4">
+                      <div class=" w-100">
+                          <hr>
+                        </div>
+                     <div class="w-auto text-nowrap mx-2">
+                      <span >or continue with</span>
+                     </div>
+                      <div class=" w-100">
+                          <hr>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                      <button class="d-flex align-items-center btn border btn-signin py-2 px-4 "><i class="bi bi-google me-2"></i>
+                      <span>Google</span></button>
+                      <button class="d-flex align-items-center btn border btn-signin py-2 px-4 mx-3">
+                        <iconify-icon icon="ri:facebook-fill" class="me-2"></iconify-icon>
+                        <span>Facebook</span>
+                      </button>
+                      <button class="d-flex align-items-center btn border btn-signin py-2 px-4 "><i class="bi bi-apple me-2"></i><span>Apple</span></button>
+                    </div>
+                  </form>
+                </div>
+                <!-- footer -->
+                <div>
+                  <div class="mb-4 fs-7 mt-5">
+                      <a href="" class="text-dark">Need help? </a>
+                  </div>
+                  <div>
+                      <span class="fs-7">© All rights reserved. Made by Createx Studio </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-none d-lg-block col-lg-8 pe-0">
+              <div class=" bg-gradient p-5 rounded-4">
+                <h3 class="text-center">Cartzilla account benefits</h3>
+                <div class="row gy-4 mt-3">
+                   <div class="col-6">
+                    <div class="text-center bg-trans py-5">
+                      <iconify-icon icon="quill:mail" class="fs-3 text-primary bg-white p-3 rounded-circle "></iconify-icon>
+                      <h6 class="fw-semibold text-nowrap mt-4">Subscribe to your favorite products</h6>
+                    </div>
+                   </div>
+                   <div class="col-6">
+                    <div class="text-center bg-trans py-5">
+                      <iconify-icon icon="weui:setting-outlined" class=" fs-3 text-primary bg-white p-3 rounded-circle "></iconify-icon>
+                      <h6 class="fw-semibold text-nowrap mt-4">View and manage your orders and wishlist</h6>
+                    </div>
+                   </div>
+                   <div class="col-6">
+                    <div class="text-center bg-trans py-5">
+                      <iconify-icon icon="ph:gift-light" class="fs-3 text-primary bg-white p-3 rounded-circle "></iconify-icon>
+                      <h6 class="fw-semibold text-nowrap mt-4">Earn rewards for future purchases</h6>
+                    </div>
+                   </div>
+                   <div class="col-6">
+                    <div class="text-center bg-trans py-5">
+                      <iconify-icon icon="material-symbols-light:percent" class="fs-3 text-primary bg-white p-3 rounded-circle "></iconify-icon>
+                      <h6 class="fw-semibold text-nowrap mt-4">Receive exclusive offers and discounts</h6>
+                    </div>
+                   </div>
+                   <div class="col-6">
+                    <div class="text-center bg-trans py-5">
+                      <iconify-icon icon="mdi:heart-outline" class="fs-3 text-primary bg-white p-3 rounded-circle "></iconify-icon>
+                      <h6 class="fw-semibold  mt-4">Create multiple wishlists</h6>
+                    </div>
+                   </div>
+                   <div class="col-6">
+                    <div class="text-center bg-trans py-5">
+                        <iconify-icon icon="tdesign:cd" class="fs-3 text-primary bg-white p-3 rounded-circle"></iconify-icon>
+                      <h6 class="fw-semibold text-nowrap mt-4">Pay for purchases by installments</h6>
+                    </div>
+                   </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+  
 
     
     <script src="/script/signup.js"></script>

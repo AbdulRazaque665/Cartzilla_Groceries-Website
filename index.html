@@ -20,6 +20,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
   </head>
   <body>
     <header class="bg-white border-bottom position-sticky top-0 z-1">
@@ -443,8 +445,8 @@
             role="button"
             aria-controls="offcanvasMenu"
           >
-            <span class="fs-6 m-0"
-              >Delivery <br /><span class="fs-7 m-0"
+            <span class="fs-6 m-0 fw-semibold"
+              >Delivery <br /><span class=" fw-normal nav-link fs-7 m-0"
                 >Set your address <i class="bi bi-chevron-down"></i></span
             ></span>
           </a>
@@ -457,7 +459,7 @@
               <i class="bi bi-brightness-high"></i>
             </a>
             <a
-              href=""
+              href="/pages/signin.html"
               class="icon-hover text-decoration-none text-black ms-3 fs-5"
             >
               <i class="bi bi-person"></i>
@@ -479,7 +481,6 @@
           </div>
         </div>
       </nav>
-
       <nav class="navbar navbar-expand d-none d-md-block d-lg-none">
         <div class="container-fluid">
           <a
@@ -1393,15 +1394,16 @@
         </div>
 
         <!-- Items -->
-        <div class="offcanvas-body d-flex flex-column gap-4 pt-2"></div>
+        <div class="offcanvas-body d-flex flex-column gap-4 pt-2">
+          <div id="cart-container"></div>
+        </div>
 
         <!-- Footer -->
         <div class="offcanvas-header flex-column align-items-start">
           <div
             class="d-flex align-items-center justify-content-between w-100 mb-3 mb-md-4"
           >
-            <span class="text-light-emphasis">Subtotal:</span>
-            <span class="h6 mb-0">$68.91</span>
+            <div class="text-light-emphasis" id="total-data"></div>
           </div>
           <div class="d-flex w-100 gap-3">
             <a
@@ -1428,7 +1430,7 @@
             <i class="bi bi-percent fs-5 text-danger"></i>
           </div>
           <div>
-            <span>Weekly sale</span>
+            <span class="nav-link">Weekly sale</span>
           </div>
         </div>
         <div class="d-flex align-items-center text-nowrap me-3">
@@ -1436,7 +1438,7 @@
             <img width="28px" src="/images/th01.png" alt="" />
           </div>
           <div>
-            <span>Vegetables</span>
+            <span class="nav-link">Vegetables</span>
           </div>
         </div>
         <div class="d-flex align-items-center text-nowrap me-3">
@@ -1444,7 +1446,7 @@
             <img width="28px" src="/images/th02.png" alt="" />
           </div>
           <div>
-            <span>Easter is coming</span>
+            <span class="nav-link">Easter is coming</span>
           </div>
         </div>
         <div class="d-flex align-items-center text-nowrap me-3">
@@ -1452,7 +1454,7 @@
             <img width="28px" src="/images/th03.png" alt="" />
           </div>
           <div>
-            <span>Poultry meat</span>
+            <span class="nav-link">Poultry meat</span>
           </div>
         </div>
         <div class="d-flex align-items-center text-nowrap me-3">
@@ -1460,7 +1462,7 @@
             <img width="28px" src="/images/th04.png" alt="" />
           </div>
           <div>
-            <span>Fresh fruits</span>
+            <span class="nav-link">Fresh fruits</span>
           </div>
         </div>
         <div class="d-flex align-items-center text-nowrap me-3">
@@ -1468,7 +1470,7 @@
             <img width="28px" src="/images/th05.png" alt="" />
           </div>
           <div>
-            <span>St. Patrick's day</span>
+            <span class="nav-link">St. Patrick's day</span>
           </div>
         </div>
         <div class="d-flex align-items-center text-nowrap me-3">
@@ -1476,7 +1478,7 @@
             <img width="28px" src="/images/th06.png" alt="" />
           </div>
           <div>
-            <span>Exotic fruits</span>
+            <span class="nav-link">Exotic fruits</span>
           </div>
         </div>
       </div>
@@ -1547,62 +1549,652 @@
     </div>
 
     <!-- mini-cards -->
-   <div class="container-fluid mt-4 mb-5">
-    <div class="row gap-3 justify-content-center">
-      <!-- card-1 -->
-      <div style="width: 400px;height: auto;" class="col-3  bg-1 rounded-4">
-        <div class="row d-flex align-items-center">
-          <div class="col-6 ps-4">
-            <span>124 products</span>
-            <h3 class="fs-4">Only fresh fish to your table</h3>
-            <button class="bg-transparent border-0 fs-6">Shop now <i class="bi bi-chevron-right"></i>
-            </button>
+    <div class="container-fluid mt-4 mb-5">
+      <div class="row gap-4 justify-content-center">
+        <!-- card-1 -->
+        <div style="width: 400px; height: auto" class="col-3 bg-1 rounded-4">
+          <div class="row d-flex align-items-center">
+            <div class="col-6 ps-4">
+              <span>124 products</span>
+              <h3 class="fs-4">Only fresh fish to your table</h3>
+              <button class="bg-transparent border-0 fs-6">
+                Shop now <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+            <div class="col-6 px-0">
+              <img src="/images/01.png" class="img-fluid rounded-4" alt="" />
+            </div>
           </div>
-          <div class="col-6 px-0">
-            <img src="/images/01.png" class="img-fluid rounded-4" alt="" />
+        </div>
+        <!-- card-2 -->
+        <div style="width: 400px; height: auto" class="col-3 bg-2 rounded-4">
+          <div class="row d-flex align-items-center">
+            <div class="col-6 ps-4">
+              <span>97 products</span>
+              <h3 class="fs-4">Products for Easter table</h3>
+              <button class="bg-transparent border-0 fs-6">
+                Shop now <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+            <div class="col-6 px-0">
+              <img src="/images/02.png" class="img-fluid rounded-4" alt="" />
+            </div>
           </div>
         </div>
-      </div>
-      <!-- card-2 -->
-      <div style="width: 400px;height: auto;" class="col-3 bg-2  rounded-4">
-       <div class="row d-flex align-items-center">
-        <div class="col-6 ps-4">
-          <span>97 products</span>
-          <h3 class="fs-4">Products for Easter table</h3>
-          <button class="bg-transparent border-0 fs-6">Shop now <i class="bi bi-chevron-right"></i>
-          </button>
+        <!-- card-3 -->
+        <div style="width: 400px; height: auto" class="col-3 bg-3 rounded-4">
+          <div class="row d-flex align-items-center">
+            <div class="col-6 ps-4">
+              <span>28 products</span>
+              <h3 class="fs-4">Berries from the garden</h3>
+              <button class="bg-transparent border-0 fs-6">
+                Shop now <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+            <div class="col-6 px-0">
+              <img src="/images/03.png" class="img-fluid rounded-4" alt="" />
+            </div>
+          </div>
         </div>
-        <div class="col-6 px-0">
-          <img src="/images/02.png" class="img-fluid rounded-4" alt="" />
-        </div>
-       </div>
-      </div>
-      <!-- card-3 -->
-      <div style="width: 400px;height: auto;" class="col-3 bg-3  rounded-4">
-       <div class="row d-flex align-items-center">
-        <div class="col-6 ps-4">
-          <span>28 products</span>
-          <h3 class="fs-4">Berries from the garden</h3>
-          <button class="bg-transparent border-0 fs-6">Shop now <i class="bi bi-chevron-right"></i>
-          </button>
-        </div>
-        <div class="col-6 px-0">
-          <img src="/images/03.png" class="img-fluid rounded-4" alt="" />
-        </div>
-       </div>
       </div>
     </div>
-   </div>
 
-   <!-- main products cards -->
-     <div class="margin-top">
+    <!-- main products cards -->
+    <div class="margin-top">
       <div class="container-fluid">
         <div class="mx-5">
-          <h1 class="">Products</h1>
-          <!-- div -->
+          <div class="row">
+            <div class="col-lg-4 d-none d-lg-block">
+              <h3 class="fw-bold mb-4">Categories</h3>
+              <hr class="mb-5" />
+              <div>
+                <div class="d-flex align-items-center mb-4">
+                  <div
+                    class="p-2 rounded-circle bg-body-secondary d-flex justify-content-center align-content-center"
+                  >
+                    <img
+                      class="img-fluid"
+                      width="40px"
+                      src="images/01 (1).png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h4 class="mb-0 fs-6 fw-semibold nav-link">Bakery & bread</h4>
+                    <span class="fs-7 text-secondary">230 products</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                  <div
+                    class="p-2 rounded-circle bg-body-secondary d-flex justify-content-center align-content-center"
+                  >
+                    <img
+                      class="img-fluid"
+                      width="40px"
+                      src="images/02 (1).png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h4 class="mb-0 fs-6 fw-semibold nav-link">Vegetables</h4>
+                    <span class="fs-7 text-secondary">180 products</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                  <div
+                    class="p-2 rounded-circle bg-body-secondary d-flex justify-content-center align-content-center"
+                  >
+                    <img
+                      class="img-fluid"
+                      width="40px"
+                      src="images/03 (1).png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h4 class="mb-0 fs-6 fw-semibold nav-link">Fresh fruits</h4>
+                    <span class="fs-7 text-secondary">205 products</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                  <div
+                    class="p-2 rounded-circle bg-body-secondary d-flex justify-content-center align-content-center"
+                  >
+                    <img
+                      class="img-fluid"
+                      width="40px"
+                      src="images/04.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h4 class="mb-0 fs-6 fw-semibold nav-link">Meet Italian dinner</h4>
+                    <span class="fs-7 text-secondary">309 products</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                  <div
+                    class="p-2 rounded-circle bg-body-secondary d-flex justify-content-center align-content-center"
+                  >
+                    <img
+                      class="img-fluid"
+                      width="40px"
+                      src="images/05.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h4 class="mb-0 fs-6 fw-semibold nav-link">Beverages</h4>
+                    <span class="fs-7 text-secondary">372 products</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                  <div
+                    class="p-2 rounded-circle bg-body-secondary d-flex justify-content-center align-content-center"
+                  >
+                    <img
+                      class="img-fluid"
+                      width="40px"
+                      src="images/06.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h4 class="mb-0 fs-6 fw-semibold nav-link">Meat products</h4>
+                    <span class="fs-7 text-secondary">124 products</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                  <div
+                    class="p-2 rounded-circle bg-body-secondary d-flex justify-content-center align-content-center"
+                  >
+                    <img
+                      class="img-fluid"
+                      width="40px"
+                      src="images/07.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h4 class="mb-0 fs-6 fw-semibold nav-link">Sauces and ketchup</h4>
+                    <span class="fs-7 text-secondary">219 products</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                  <div
+                    class="p-2 rounded-circle bg-body-secondary d-flex justify-content-center align-content-center"
+                  >
+                    <img
+                      class="img-fluid"
+                      width="40px"
+                      src="images/08.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="ms-3">
+                    <h4 class="mb-0 fs-6 fw-semibold nav-link">Dairy and eggs</h4>
+                    <span class="fs-7 text-secondary">146 products</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-8">
+              <h3 class="fw-bold mb-4">Products</h3>
+              <hr class="mb-5" />
+              <div class="row gy-5 gx-3" id="div-parrent"></div>
+            </div>
+          </div>
         </div>
       </div>
-     </div>
+    </div>
+
+    <!-- lifestyle cards -->
+    <div class="margin-top">
+      <div class="container">
+        <h3 class="text-center mb-5">Shop by lifestyle</h3>
+        <div
+          class="row gx-lg-5 d-flex justify-content-center align-content-center overflow-x-auto"
+        >
+          <div class="col-lg-3" style="width: 280px">
+            <div
+              class="lifestyle-cards rounded-circle bg-1 d-flex justify-content-center align-items-center"
+            >
+              <svg
+                class="m-2"
+                xmlns="http://www.w3.org/2000/svg"
+                width="76"
+                height="76"
+                viewBox="0 0 76 76"
+                fill="none"
+              >
+                <path
+                  d="M62.631 13.369l-7.214 7.214M20.583 55.417l-7.214 7.214M38 51.037c0-11.315-13.926-11.315-13.926-11.315s0 13.926 11.315 13.926H38m0-2.611v2.611m0-2.611c0-11.315 13.926-11.315 13.926-11.315s0 13.926-11.315 13.926H38m0-14.222c0-11.315-13.926-11.315-13.926-11.315s0 13.926 11.315 13.926H38m0-2.611v2.611m0-2.611c0-11.315 13.926-11.315 13.926-11.315s0 13.926-11.315 13.926H38m0 18.585v-6.967M72.833 38c0 19.238-15.595 34.833-34.833 34.833S3.167 57.238 3.167 38 18.762 3.167 38 3.167 72.833 18.762 72.833 38zM38 15.378s9.847 9.849 1.846 17.849L38 35.074l-1.846-1.847C28.153 25.227 38 15.378 38 15.378z"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </div>
+            <div class="text-center">
+              <h5 class="nav-link">Gluten-Free</h5>
+              <p class="fs-7">Foods that don't contain gluten</p>
+            </div>
+          </div>
+          <!-- card-2 -->
+          <div class="col-lg-3" style="width: 280px">
+            <div
+              class="lifestyle-cards rounded-circle bg-2 d-flex justify-content-center align-items-center"
+            >
+              <svg
+                class="m-2"
+                xmlns="http://www.w3.org/2000/svg"
+                width="76"
+                height="76"
+                viewBox="0 0 76 76"
+                fill="none"
+              >
+                <g
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-miterlimit="10"
+                >
+                  <g stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M16.842 37.347c5.205 6.789 12.251 18.802 12.251 36.436h17.812c0-17.634 7.066-29.648 12.251-36.436m-7.599-3.958c-3.048 4.71-6.452 10.984-9.084 18.565V32.142"
+                    ></path>
+                    <path
+                      d="M33.547 32.162v19.811c-2.632-7.56-6.036-13.834-9.104-18.584"
+                    ></path>
+                  </g>
+                  <path
+                    d="M62.502 15.577c-.079 0-.139.02-.218.02-1.029-5.086-5.522-8.926-10.905-8.926-1.405 0-2.731.297-3.958.752-1.979-3.127-5.423-5.205-9.401-5.205-3.958 0-7.422 2.098-9.401 5.205-1.227-.475-2.553-.752-3.958-.752-5.403 0-9.896 3.84-10.905 8.926-.079 0-.139-.02-.218-.02-6.155 0-11.281 4.988-11.281 11.143s5.126 11.143 11.281 11.143c3.76 0 7.046-1.88 9.045-4.73.673.158 1.366.277 2.078.277 2.692 0 5.067-1.207 6.709-3.107 1.623 1.88 3.978 3.107 6.65 3.107s5.027-1.227 6.65-3.107c1.643 1.88 4.018 3.107 6.709 3.107.712 0 1.405-.099 2.078-.277 2.019 2.85 5.304 4.73 9.045 4.73 6.155 0 11.281-4.987 11.281-11.143s-5.126-11.143-11.281-11.143z"
+                    stroke-linejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="text-center">
+              <h5 class="nav-link">Vegan</h5>
+              <p class="fs-7">Vegetable based goodness</p>
+            </div>
+          </div>
+          <!-- card-3 -->
+          <div class="col-lg-3" style="width: 280px">
+            <div
+              class="lifestyle-cards rounded-circle bg-3 d-flex justify-content-center align-items-center"
+            >
+              <svg
+                class="m-2"
+                xmlns="http://www.w3.org/2000/svg"
+                width="76"
+                height="76"
+                viewBox="0 0 76 76"
+                fill="none"
+              >
+                <path
+                  d="M9.5 72.8336C9.5 72.8336 9.875 42.7074 38 34.8336"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  d="M11.1264 58.4427C7.13273 49.8272 -11.3834 1.3653 66.3117 6.74996C67.4008 6.74996 68.49 7.82689 68.8531 8.90382C70.6684 18.9552 74.6621 64.1863 13.6678 59.8786C12.2156 59.8786 11.4895 59.5196 11.1264 58.4427Z"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-miterlimit="10"
+                ></path>
+              </svg>
+            </div>
+            <div class="text-center">
+              <h5 class="nav-link">Plants based</h5>
+              <p class="fs-7">Based on herbal ingredients</p>
+            </div>
+          </div>
+          <!-- card-4 -->
+          <div class="col-lg-3" style="width: 280px">
+            <div
+              class="lifestyle-cards rounded-circle bg-4 d-flex justify-content-center align-items-center"
+            >
+              <svg
+                class="m-2"
+                xmlns="http://www.w3.org/2000/svg"
+                width="76"
+                height="76"
+                viewBox="0 0 76 76"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-miterlimit="10"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M58.59 33.535c-2.219-3.028-3.595-6.515-4.043-10.133-1.227-9.91-7.437-16.42-6.862-15.718-4.878-5.956-14.1-6.035-19.083-.163-4.128 4.863-6.442 10.345-7.191 16.12-.454 3.502-1.759 6.871-3.919 9.785-3.034 4.093-4.824 9.13-4.824 14.577 0 13.7 11.607 24.962 25.584 24.829 13.876-.132 25.083-11.198 25.083-24.829 0-5.399-1.758-10.395-4.744-14.469z"
+                ></path>
+                <path
+                  d="M48.871 48.815c0 5.885-4.867 10.655-10.871 10.655S27.129 54.7 27.129 48.815 31.996 34.495 38 34.495s10.871 8.435 10.871 14.32z"
+                ></path>
+              </svg>
+            </div>
+            <div class="text-center">
+              <h5 class="nav-link">Keto</h5>
+              <p class="fs-7">Good fats served in food</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- recipes -->
+    <div class="margin-top">
+      <div class="container-fluid">
+        <h3 class="mx-3 mx-lg-5 fw-semibold mb-5 mb-lg-4">Recipes</h3>
+        <div class="mx-3 mx-lg-5 row gy-5 gy-lg-0">
+          <div class="col-12 col-lg-5 ps-0 mt-4">
+            <!-- card-1 -->
+            <div class="d-flex justify-content-between align-items-center">
+              <img
+                src="/images/01 (1).jpg"
+                width="200px"
+                class="img-fluid rounded-3 me-4"
+                alt=""
+              />
+              <div>
+                <h6>Garden salad with a mix of lettuce, cucumber and tomato</h6>
+                <div class="d-flex align-items-center">
+                  <span class="fs-7"><i class="bi bi-clock"></i> 30 min</span>
+                  <span class="fs-7 mx-2 mx-lg-4"
+                    ><i class="bi bi-lightning-charge"></i> Easy</span
+                  >
+                  <span class="fs-7 d-flex align-items-center"
+                    ><iconify-icon
+                      icon="arcticons:foodora"
+                      class="fs-5"
+                    ></iconify-icon>
+                    4 por</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- card-2 -->
+            <div class="d-flex my-4 justify-content-between align-items-center">
+              <img
+                src="/images/02 (1).jpg"
+                width="200px"
+                class="img-fluid rounded-3 me-4"
+                alt=""
+              />
+              <div>
+                <h6>
+                  Raspberry fresh lemonade with lemon, strawberry syrup and mint
+                </h6>
+                <div class="d-flex align-items-center">
+                  <span class="fs-7"><i class="bi bi-clock"></i> 50 min</span>
+                  <span class="fs-7 mx-2 mx-lg-4"
+                    ><i class="bi bi-lightning-charge"></i> Easy</span
+                  >
+                  <span class="fs-7 d-flex align-items-center"
+                    ><iconify-icon
+                      icon="arcticons:foodora"
+                      class="fs-5"
+                    ></iconify-icon>
+                    8 por</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- card-3 -->
+            <div class="d-flex justify-content-between align-items-center">
+              <img
+                src="/images/03 (1).jpg"
+                width="200px"
+                class="img-fluid rounded-3 me-4"
+                alt=""
+              />
+              <div>
+                <h6>Penne pasta with spinach and zucchini in a creamy sauce</h6>
+                <div class="d-flex align-items-center">
+                  <span class="fs-7"><i class="bi bi-clock"></i> 25 min</span>
+                  <span class="fs-7 mx-2 mx-lg-4"
+                    ><i class="bi bi-lightning-charge"></i> Easy</span
+                  >
+                  <span class="fs-7 d-flex align-items-center"
+                    ><iconify-icon
+                      icon="arcticons:foodora"
+                      class="fs-5"
+                    ></iconify-icon>
+                    2 por</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-7">
+            <div
+              class="row border border-1 p-4 rounded-4 h-100 d-flex align-items-center justify-content-between"
+            >
+              <div class="col-6">
+                <img
+                  src="/images/book-cover.jpg"
+                  class="img-fluid rounded-3"
+                  alt=""
+                />
+              </div>
+              <div class="col-6">
+                <span class="bg-body-secondary p-1 rounded-5 fs-7"
+                  >Cookbook</span
+                >
+                <h4 class="fw-semibold mt-4">The Best in Gastronomy</h4>
+                <span class="fs-7">Author: <span>Dana Chambers</span></span>
+                <p class="fs-7 mt-2">
+                  An exquisite cookbook that takes readers on a culinary journey
+                  around the world. With stunning photography and detailed
+                  instructions ...
+                </p>
+                <h4>$12.40</h4>
+                <button
+                  class="d-flex align-items-center btn btn-dark rounded-5 justify-content-center"
+                >
+                  Shop Book<iconify-icon
+                    icon="ic:round-chevron-right"
+                    class="fs-4"
+                  ></iconify-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- last-cards -->
+    <div class="container-fluid margin-top">
+      <div class="mx-lg-5">
+        <div class="row gy-4">
+          <div class="col-12 col-lg-7">
+            <div class="bg-body-tertiary d-flex align-items-center rounded-4">
+              <img
+                src="/images/banner01.png"
+                class="img-fluid"
+                width="300px"
+                alt=""
+              />
+              <div>
+                <h4 class="fw-semibold">
+                  Make online shop easier with our Cartzilla App
+                </h4>
+                <div>
+                  <button class="border-0 bg-transparent">
+                    <img
+                      width="150px"
+                      src="/images/google-play-store-download-button-in-white-colors-download-on-the-google-play-store-free-png.png"
+                      alt=""
+                    />
+                  </button>
+                  <button class="border-0 bg-transparent">
+                    <img
+                      width="150px"
+                      src="/images/app-store-download-button-in-white-colors-download-on-the-apple-app-store-free-png.png"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <div class="bg-body-tertiary d-flex align-items-center rounded-4">
+              <img
+                src="/images/banner02.png"
+                width="220px"
+                class="img-fluid rounded-4"
+                alt=""
+              />
+              <div>
+                <h4 class="fw-semibold">We'd love to hear what you think!</h4>
+                <div>
+                  <button class="fs-7 btn">
+                    Give a feedback <i class="bi bi-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="margin-top container-fluid bg-dark">
+      <div class="mx-lg-5">
+        <!-- footer-1 -->
+        <div class="p-5 text-center d-flex flex-column align-items-center">
+          <h3 class="text-white">Stay in touch with us</h3>
+          <span class="text-white mt-2 mb-4"
+            >Receive the latest updates about our products & promotions</span
+          >
+          <div class="d-flex">
+            <input
+              type="email"
+              name=""
+              id=""
+              placeholder="Your Email"
+              class="input-placeholder py-2 px-5 bg-transparent border border-dark-subtle rounded-5 form-control text-white me-2"
+            />
+            <button class="btn btn-danger text-white rounded-5 px-3">
+              Subscribe
+            </button>
+          </div>
+        </div>
+        <hr class="text-secondary" />
+        <!-- footer-2 -->
+        <div class="row gy-5">
+          <div class="col-12 col-lg-4 d-flex flex-column align-items-lg-start align-items-center">
+            <a href="" class="text-white text-decoration-none fs-3 fw-bold"
+              >Cartzilla</a
+            >
+            <p class="text-second fs-7 w-75 text-center text-lg-start">
+              With a wide selection of fresh produce, pantry staples, and
+              household essentials, we've got everything you need just a click
+              away.
+            </p>
+            <div class="d-flex justify-content-between w-50">
+              <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-white"><i class="bi bi-telegram"></i></a>
+              <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-2">
+            <ul class="nav-item">
+              <li class="nav-link mb-3 text-white fw-semibold">Categories</li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Weekly sale
+              </li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Special price
+              </li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Easter is coming
+              </li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Italian dinner
+              </li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Fresh fruits
+              </li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Exotic fruits
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-3 col-lg-2">
+            <ul class="nav-item">
+              <li class="nav-link mb-3 text-white fw-semibold">Company</li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Blog and news
+              </li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">About us</li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">FAQ page</li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Contact us
+              </li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">Careers</li>
+            </ul>
+          </div>
+          <div class="col-sm-3 col-lg-2">
+            <ul class="nav-item">
+              <li class="nav-link mb-3 text-white fw-semibold">Account</li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Your account
+              </li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Shipping & policies
+              </li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Refunds & replacements
+              </li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Order tracking
+              </li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Delivery info
+              </li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Taxes & fees
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-3 col-lg-2">
+            <ul class="nav-item">
+              <li class="nav-link mb-3 text-white fw-semibold">
+                Customer service
+              </li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Payment methods
+              </li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Money back guarantee
+              </li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Refunds & replacements
+              </li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Order tracking
+              </li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">
+                Delivery info
+              </li>
+              <li class="nav-link mb-3 fs-7 text-second fw-medium">Shipping</li>
+            </ul>
+          </div>
+        </div>
+        <!-- footer-3 -->
+        <div class="py-5 text-center text-lg-start"><span class="text-second fs-7 ">© All rights reserved. Made with <i class="bi bi-heart-fill text-white"></i> by Abdul Razaque</span></div>
+      </div>
+    </footer>
 
     <script src="/script/script.js"></script>
   </body>
