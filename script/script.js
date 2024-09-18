@@ -119,4 +119,4 @@ function removeFromCart(productId) {
     displayCart(); 
 }
 
-displayCart();
+displayCart(); 
